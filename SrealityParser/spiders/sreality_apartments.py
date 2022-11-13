@@ -12,5 +12,18 @@ class SrealityApartmentsSpider(scrapy.Spider):
         url = f"https://www.sreality.cz/api/en/v2/estates?category_main_cb=1&category_type_cb=1&sort=0&per_page=" \
               f"{self.count+1}"
         yield scrapy.Request(url, callback=self.parse)
-    def parse(self, response):
-        pass
+
+    def parse(self, response, **kwargs):
+        jsonresponse = json.loads(response.text)
+        for item in jsonresponse["_embedded"]["estates"]:
+            yield scrapy.Request(
+                'https://www.sreality.cz/api' + item['_links']['self']['href'], callback=self.parse_apartment)
+
+    def parser_apartment(self, response):
+        jsonresponse = json.loads(response.text)
+        apartment = SrealityparserItem()
+        apartment["name"] = jsonresponse["name"]["value"]
+        apartment["locality"] = jsonresponse["locality"]["value"]
+        apartment["price"] = jsonresponse["price_czk"]["value_raw"]
+        apartment["img_url"] = jsonresponse['_embedded']['images']
+        
