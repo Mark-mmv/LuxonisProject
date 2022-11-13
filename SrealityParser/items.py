@@ -3,10 +3,12 @@
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy.item import Item, Field
 
 
-class SrealityparserItem(scrapy.Item):
+class SrealityparserItem(Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    name = Field()
+    locality = Field()
+    price = Field()
+    img_url = Field()
