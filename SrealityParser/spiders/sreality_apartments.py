@@ -10,14 +10,14 @@ class SrealityApartmentsSpider(scrapy.Spider):
 
     def start_requests(self):
         url = f"https://www.sreality.cz/api/en/v2/estates?category_main_cb=1&category_type_cb=1&sort=0&per_page=" \
-              f"{self.count+1}"
+              f"{self.count}"
         yield scrapy.Request(url, callback=self.parse)
 
     def parse(self, response, **kwargs):
         jsonresponse = json.loads(response.text)
         for item in jsonresponse["_embedded"]["estates"]:
             yield scrapy.Request(
-                'https://www.sreality.cz/api' + item['_links']['self']['href'], callback=self.parse_apartment)
+                'https://www.sreality.cz/api' + item['_links']['self']['href'], callback=self.parser_apartment)
 
     def parser_apartment(self, response):
         jsonresponse = json.loads(response.text)
@@ -25,9 +25,9 @@ class SrealityApartmentsSpider(scrapy.Spider):
         apartment["name"] = jsonresponse["name"]["value"]
         apartment["locality"] = jsonresponse["locality"]["value"]
         apartment["price"] = jsonresponse["price_czk"]["value_raw"]
-        for img in jsonresponse["_embedded"]["images"]:
-            if img["_links"]["view"]:
-                apartment["img_url"] = jsonresponse["_links"]["view"]["href"]
+        for imgs in jsonresponse["_embedded"]["images"]:
+            if imgs["_links"]["view"]:
+                apartment["img_url"] = imgs["_links"]["view"]["href"]
                 break
         yield apartment
 
