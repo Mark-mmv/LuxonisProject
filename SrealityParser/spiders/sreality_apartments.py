@@ -25,5 +25,9 @@ class SrealityApartmentsSpider(scrapy.Spider):
         apartment["name"] = jsonresponse["name"]["value"]
         apartment["locality"] = jsonresponse["locality"]["value"]
         apartment["price"] = jsonresponse["price_czk"]["value_raw"]
-        apartment["img_url"] = jsonresponse['_embedded']['images']
-        
+        for img in jsonresponse["_embedded"]["images"]:
+            if img["_links"]["view"]:
+                apartment["img_url"] = jsonresponse["_links"]["view"]["href"]
+                break
+        yield apartment
+
