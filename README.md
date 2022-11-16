@@ -1,7 +1,9 @@
 # LuxonisProject
 Parser 500 newest apartments from sereality.cz
 
-1) Data base PostgreSQL
+How to use:
+
+1) Haw Data base PostgreSQL
 
     host: localhost(127.0.0.1:)
     
@@ -14,6 +16,7 @@ Parser 500 newest apartments from sereality.cz
     password: 2022
     
     db name: apartments_db
+    
     
     
 2) HTTP server:  port: 8081
