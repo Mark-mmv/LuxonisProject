@@ -1,0 +1,27 @@
+version: '3.5'
+services:
+
+  apartment_scraper:
+    depends_on:
+      db_task:
+        condition: service_started
+    build: ./SrealityParser
+    ports:
+    - "8080:8085"
+    links:
+      - "db_task:database"
+
+  db_task:
+    container_name: sreality_container
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=2022
+      - POSTGRES_USER=luxonis
+      - POSTGRES_DB=apartments_db
+    image: postgres:15.1-alpine
+
+  adminer:
+    image: adminer:4.8.1-standalone
+    ports:
+      - "8081:8080"
