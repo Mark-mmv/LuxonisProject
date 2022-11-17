@@ -17,18 +17,20 @@
     host: localhost(127.0.0.1:)
     
     port: 8081
+    
+    When in adminer:
         
-    System: PostgreSQL
+        System: PostgreSQL
     
-    Server: db_task
+        Server: db_task
     
-    Username: luxonis
+        Username: luxonis
     
-    Password: 2022
+        Password: 2022
     
-    Database: apartments_db
+        Database: apartments_db
         
-        and viz. table "apartments500"
+            and viz. table "apartments500"
     
     
     
