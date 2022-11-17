@@ -27,6 +27,8 @@
     Password: 2022
     
     Database: apartments_db
+        
+        and viz. table "apartments500"
     
     
     
