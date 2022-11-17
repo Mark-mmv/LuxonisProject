@@ -8,14 +8,16 @@
     host: localhost(127.0.0.1:)
     
     port: 8081
+        
+    System: PostgreSQL
     
-    server: db_task
+    Server: db_task
     
-    user: luxonis
+    Username: luxonis
     
-    password: 2022
+    Password: 2022
     
-    db name: apartments_db
+    Database: apartments_db
     
     
     
