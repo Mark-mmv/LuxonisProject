@@ -2,7 +2,7 @@
 ###### Parser 500 newest apartments sereality.cz
 
 # You need:
-    docker 4.14.0
+    docker 4.14.0 (or newer)
     
 
 # How to use:
