@@ -18,7 +18,7 @@
     
     port: 8081
     
-    When in adminer:
+    Now into Adminer 4.8.1:
         
         System: PostgreSQL
     
