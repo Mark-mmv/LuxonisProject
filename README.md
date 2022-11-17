@@ -1,7 +1,16 @@
 # LuxonisProject
 ###### Parser 500 newest apartments sereality.cz
 
+# You need:
+    docker 4.14.0
+    
+
 # How to use:
+
+## 0) Guide
+    -install Docker 4.14.0 (or newer)
+    -have virtualization enabled in your BIOS/UEFI (check in it your Task Manager)
+    -in directory (../LuxonisProject) enter command "docker-compose up"
 
 ## 1) Database PostgreSQL
 
