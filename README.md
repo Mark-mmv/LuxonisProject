@@ -8,9 +8,9 @@
 # How to use:
 
 ## 0) Preparation
-    -install Docker 4.14.0 (or newer)
-    -have virtualization enabled in your BIOS/UEFI (check in it your Task Manager)
-    -in directory (../LuxonisProject) enter command "docker-compose up"
+    a) install Docker 4.14.0 (or newer)
+    b) have virtualization enabled in your BIOS/UEFI (check in it your Task Manager)
+    C) in directory (../LuxonisProject) enter command "docker-compose up"
 
 ## 1) Database PostgreSQL
 
