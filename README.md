@@ -38,7 +38,7 @@
     
     
     
-## 2) HTTP server:  port: 8081
+## 2) HTTP server
 
     host: localhost(127.0.0.1:)
     
