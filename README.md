@@ -1,5 +1,5 @@
 # LuxonisProject
-###### Parser 500 newest apartments from sereality.cz
+###### Parser 500 newest apartments sereality.cz
 
 # How to use:
 
