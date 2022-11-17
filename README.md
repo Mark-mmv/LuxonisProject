@@ -3,7 +3,7 @@ Parser 500 newest apartments from sereality.cz
 
 How to use:
 
-1) Haw Data base PostgreSQL
+1) Data base PostgreSQL
 
     host: localhost(127.0.0.1:)
     
