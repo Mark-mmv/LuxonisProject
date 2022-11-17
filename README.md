@@ -43,3 +43,8 @@
     host: localhost(127.0.0.1:)
     
     port: 8080
+    
+
+
+
+#scrapy#sreality#scrapy sreality#sreality scrapy#apartments#apartment#apartment scrapy#flats scrapy#flats sreality scrapy
