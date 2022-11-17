@@ -1,7 +1,7 @@
 # LuxonisProject
-Parser 500 newest apartments from sereality.cz
+# Parser 500 newest apartments from sereality.cz
 
-How to use:
+# How to use:
 
 ## 1) Database PostgreSQL
 
