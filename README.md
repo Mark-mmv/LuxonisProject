@@ -11,7 +11,7 @@
 ## 0) Preparation
     a) install Docker 4.14.0 (or newer)
     
-    b) have virtualization enabled in your BIOS/UEFI (check it in your Task Manager>performance>CPU>Virtualisation)
+    b) have virtualization enabled in your BIOS/UEFI (check it in your Task Manager>Performance>CPU>Virtualisation)
     
     C) in directory (../LuxonisProject) enter command "docker-compose up"
     
