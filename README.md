@@ -3,7 +3,7 @@ Parser 500 newest apartments from sereality.cz
 
 How to use:
 
-##1) Database PostgreSQL
+######1) Database PostgreSQL
 
     host: localhost(127.0.0.1:)
     
@@ -19,7 +19,7 @@ How to use:
     
     
     
-##2) HTTP server:  port: 8081
+######2) HTTP server:  port: 8081
 
     host: localhost(127.0.0.1:)
     
