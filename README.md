@@ -7,7 +7,7 @@
 
 # How to use:
 
-## 0) Guide
+## 0) Preparation
     -install Docker 4.14.0 (or newer)
     -have virtualization enabled in your BIOS/UEFI (check in it your Task Manager)
     -in directory (../LuxonisProject) enter command "docker-compose up"
